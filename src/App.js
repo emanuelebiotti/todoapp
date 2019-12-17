@@ -4,7 +4,8 @@ import {BrowserRouter as Router, Route} from 'react-router-dom';
 import Todos from './components/Todos';
 import AddTodo from './components/AddTodo';
 import Header from './components/layout/header';
-import About from './components/pages/About'
+import About from './components/pages/About';
+import Contact from './components/pages/Contact';
 import uuid from 'uuid';
 
 class App extends Component {
@@ -69,13 +70,14 @@ class App extends Component {
         <div className="App">
           <div className="container">
             <Header/>
-            <Route exact path="/" render={props => (
+            <Route exact path="/" render={() => (
               <React.Fragment>
                 <AddTodo addTodo={this.addTodo}/>
                 <Todos todos={this.state.todos} markComplete={this.markComplete} delTodo={this.delTodo}/>
               </React.Fragment>
             )}/>
             <Route path="/about" component={About}/>
+            <Route path="/contacts" component={Contact}/>
           </div>
         </div>
       </Router>
