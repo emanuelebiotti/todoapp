@@ -6,6 +6,7 @@ import AddTodo from './components/AddTodo';
 import Header from './components/layout/header';
 import About from './components/pages/About';
 import Contact from './components/pages/Contact';
+import Pokemon from './components/pages/Pokemon';
 import uuid from 'uuid';
 
 class App extends Component {
@@ -24,6 +25,36 @@ class App extends Component {
       {
         id: uuid.v4(),
         title: 'Meeting with boss',
+        completed: false
+      },
+      {
+        id: uuid.v4(),
+        title: 'Buy some bread',
+        completed: false
+      },
+      {
+        id: uuid.v4(),
+        title: 'Walk the dog',
+        completed: true
+      },
+      {
+        id: uuid.v4(),
+        title: 'Cook for dinner',
+        completed: false
+      },
+      {
+        id: uuid.v4(),
+        title: 'Have some shopping',
+        completed: false
+      },
+      {
+        id: uuid.v4(),
+        title: 'Hang out with friends',
+        completed: true
+      },
+      {
+        id: uuid.v4(),
+        title: 'Get some sleep',
         completed: false
       }
     ]
@@ -78,6 +109,7 @@ class App extends Component {
             )}/>
             <Route path="/about" component={About}/>
             <Route path="/contacts" component={Contact}/>
+            <Route path="/pokemon" component={Pokemon}/>
           </div>
         </div>
       </Router>
